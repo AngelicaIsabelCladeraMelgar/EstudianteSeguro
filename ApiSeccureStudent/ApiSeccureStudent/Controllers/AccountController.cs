@@ -52,6 +52,7 @@ namespace ApiSeccureStudent.Controllers
         public ISecureDataFormat<AuthenticationTicket> AccessTokenFormat { get; private set; }
 
         // GET api/Account/UserInfo
+        [Authorize]
         [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
         [Route("UserInfo")]
         public UserInfoViewModel GetUserInfo()
@@ -67,6 +68,7 @@ namespace ApiSeccureStudent.Controllers
         }
 
         // POST api/Account/Logout
+        [Authorize]
         [Route("Logout")]
         public IHttpActionResult Logout()
         {
@@ -75,6 +77,7 @@ namespace ApiSeccureStudent.Controllers
         }
 
         // GET api/Account/ManageInfo?returnUrl=%2F&generateState=true
+        [Authorize]
         [Route("ManageInfo")]
         public async Task<ManageInfoViewModel> GetManageInfo(string returnUrl, bool generateState = false)
         {
@@ -115,6 +118,7 @@ namespace ApiSeccureStudent.Controllers
         }
 
         // POST api/Account/ChangePassword
+        [Authorize]
         [Route("ChangePassword")]
         public async Task<IHttpActionResult> ChangePassword(ChangePasswordBindingModel model)
         {
@@ -135,6 +139,7 @@ namespace ApiSeccureStudent.Controllers
         }
 
         // POST api/Account/SetPassword
+        [Authorize]
         [Route("SetPassword")]
         public async Task<IHttpActionResult> SetPassword(SetPasswordBindingModel model)
         {
@@ -154,6 +159,7 @@ namespace ApiSeccureStudent.Controllers
         }
 
         // POST api/Account/AddExternalLogin
+        [Authorize]
         [Route("AddExternalLogin")]
         public async Task<IHttpActionResult> AddExternalLogin(AddExternalLoginBindingModel model)
         {
@@ -192,6 +198,7 @@ namespace ApiSeccureStudent.Controllers
         }
 
         // POST api/Account/RemoveLogin
+        [Authorize]
         [Route("RemoveLogin")]
         public async Task<IHttpActionResult> RemoveLogin(RemoveLoginBindingModel model)
         {
@@ -221,9 +228,10 @@ namespace ApiSeccureStudent.Controllers
         }
 
         // GET api/Account/ExternalLogin
+        [Authorize]
         [OverrideAuthentication]
         [HostAuthentication(DefaultAuthenticationTypes.ExternalCookie)]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [Route("ExternalLogin", Name = "ExternalLogin")]
         public async Task<IHttpActionResult> GetExternalLogin(string provider, string error = null)
         {
@@ -278,7 +286,8 @@ namespace ApiSeccureStudent.Controllers
         }
 
         // GET api/Account/ExternalLogins?returnUrl=%2F&generateState=true
-        [AllowAnonymous]
+        [Authorize]
+        //[AllowAnonymous]
         [Route("ExternalLogins")]
         public IEnumerable<ExternalLoginViewModel> GetExternalLogins(string returnUrl, bool generateState = false)
         {
@@ -319,7 +328,8 @@ namespace ApiSeccureStudent.Controllers
         }
 
         // POST api/Account/Register
-        [AllowAnonymous]
+        [Authorize]
+        //[AllowAnonymous]
         [Route("Register")]
         public async Task<IHttpActionResult> Register(RegisterBindingModel model)
         {
@@ -341,6 +351,7 @@ namespace ApiSeccureStudent.Controllers
         }
 
         // POST api/Account/RegisterExternal
+        [Authorize]
         [OverrideAuthentication]
         [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
         [Route("RegisterExternal")]
