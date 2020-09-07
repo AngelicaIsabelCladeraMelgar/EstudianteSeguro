@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSeccureStudent", "ApiSec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestEstudianteSeguro.Test", "UnitTestEstudianteSeguro.Test\UnitTestEstudianteSeguro.Test.csproj", "{D49E29A5-35D2-4958-82A5-4C7AABB6743F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "admSeccureStudent", "admSeccureStudent\admSeccureStudent.csproj", "{E96C9C1E-9163-432E-816D-B96C8D014BC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeccureStudent.Tests", "SeccureStudent.Tests\SeccureStudent.Tests.csproj", "{5F70EC5B-6FE0-420D-9D65-B7FCD130EAA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D49E29A5-35D2-4958-82A5-4C7AABB6743F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D49E29A5-35D2-4958-82A5-4C7AABB6743F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D49E29A5-35D2-4958-82A5-4C7AABB6743F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E96C9C1E-9163-432E-816D-B96C8D014BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96C9C1E-9163-432E-816D-B96C8D014BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96C9C1E-9163-432E-816D-B96C8D014BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96C9C1E-9163-432E-816D-B96C8D014BC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F70EC5B-6FE0-420D-9D65-B7FCD130EAA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F70EC5B-6FE0-420D-9D65-B7FCD130EAA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F70EC5B-6FE0-420D-9D65-B7FCD130EAA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F70EC5B-6FE0-420D-9D65-B7FCD130EAA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
